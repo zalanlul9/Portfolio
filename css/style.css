@@ -1,0 +1,90 @@
+body{
+    font-family: "Geist", sans-serif;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    background-color: #222;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.bemutatkozas {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.bemutatkozas-kep {
+    flex: 1;
+}
+
+.bemutatkozas-kep img {
+    width: 100%;
+    text-align: right;
+}
+
+.bemutatkozas-szoveg {
+    flex: 1;
+}
+
+.keszsegek {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.keszsegek > div {
+    width: 50%;
+    text-align: center;
+}
+.HTML, .CSS, .JavaScript, .Python, .SQL, .Git{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projekt {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.projekt-kep {
+    flex: 1;
+}
+
+.projekt-kep img {
+    width: 100%;
+}
+
+.projekt-szoveg {
+    flex: 2;
+}
+
+.kapcsolat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.kapcsolat-szoveg {
+    flex: 1;
+    text-align: center;
+}
+
+.kapcsolat-kep {
+    flex: 1;
+}
+
+.kapcsolat-kep img {
+    width: 100%;
+}
