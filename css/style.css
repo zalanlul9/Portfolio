@@ -1,5 +1,54 @@
-body{
+/* =========================
+   ALAPBEÁLLÍTÁSOK
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1200px;
     font-family: "Geist", sans-serif;
+    background-color: #dcdcdc;
+    color: #111111;
+    line-height: 1.2;
+}
+
+
+/* =========================
+   FEJLÉC
+   ========================= */
+
+header {
+    background-color: #08b6d5;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   NAVIGÁCIÓ
+   ========================= */
+
+nav {
+    padding: 10px;
 }
 
 nav ul {
@@ -8,15 +57,48 @@ nav ul {
     gap: 15px;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav a {
     display: block;
-    background-color: #222;
+    background-color: #222222;
     color: white;
-    padding: 8px 15px;
+    padding: 10px 20px;
     text-decoration: none;
+    border-radius: 3px;
+    transition: 0.3s;
 }
+
+/* Hover effekt */
+
+nav a:hover {
+    background-color: #08b6d5;
+    color: black;
+}
+
+
+/* =========================
+   ÁLTALÁNOS SZEKCIÓK
+   ========================= */
+
+main {
+    padding: 15px;
+}
+
+section {
+    padding: 15px;
+}
+
+section > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BEMUTATKOZÁS
+   ========================= */
 
 .bemutatkozas {
     display: flex;
@@ -30,31 +112,117 @@ nav a {
 
 .bemutatkozas-kep img {
     width: 100%;
-    text-align: right;
+    display: block;
+    border-radius: 3px;
 }
 
 .bemutatkozas-szoveg {
     flex: 1;
 }
 
-.keszsegek {
-    display: flex;
-    flex-wrap: wrap;
+.bemutatkozas-szoveg h2 {
+    margin-top: 0;
 }
 
-.keszsegek > div {
-    width: 50%;
-    text-align: center;
+
+/* =========================
+   KÉSZSÉGEK
+   ========================= */
+
+/* =========================
+   KÉSZSÉGEK
+   ========================= */
+
+.keszsegek {
+    display: grid;
+
+    /* 2 oszlop */
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    max-width: 900px;
+    margin: 0 auto;
 }
-.HTML, .CSS, .JavaScript, .Python, .SQL, .Git{
+
+
+/* Egy készség kártyája */
+
+.kartya {
+    min-height: 230px;
+
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: #eeeeee;
+
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 6px #aaaaaa;
+
+    transition: 0.3s;
+}
+
+
+/* Készség neve */
+
+.kartya p {
+    margin: 0 0 15px 0;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    /* ne törjön két sorba */
+    white-space: nowrap;
+}
+
+
+/* Képek */
+
+.kartya img {
+    width: 150px;
+    height: 150px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* Hover */
+
+.kartya:hover {
+    border-color: #08b6d5;
+
+    box-shadow: 0 5px 15px #888888;
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   PROJEKTEK
+   ========================= */
+
+.projektek {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .projekt {
     display: flex;
     gap: 30px;
-    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #999999;
 }
 
 .projekt-kep {
@@ -63,11 +231,21 @@ nav a {
 
 .projekt-kep img {
     width: 100%;
+    display: block;
 }
 
 .projekt-szoveg {
     flex: 2;
 }
+
+.projekt-szoveg h3 {
+    margin-top: 0;
+}
+
+
+/* =========================
+   KAPCSOLAT
+   ========================= */
 
 .kapcsolat {
     display: flex;
@@ -87,4 +265,89 @@ nav a {
 
 .kapcsolat-kep img {
     width: 100%;
+    display: block;
+    border-radius: 3px;
+}
+
+
+/* =========================
+   LÁBLÉC
+   ========================= */
+
+footer {
+    background-color: #08b6d5;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =================================================
+   800 PX ALATT
+   ================================================= */
+
+@media (max-width: 800px) {
+
+    /* NAVIGÁCIÓ */
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+
+    /* BEMUTATKOZÁS */
+
+    .bemutatkozas {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bemutatkozas-kep,
+    .bemutatkozas-szoveg {
+        width: 100%;
+    }
+
+
+    /* KÉSZSÉGEK */
+
+    .keszsegek {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+
+    /* PROJEKTEK */
+
+    .projekt {
+        flex-direction: column;
+    }
+
+    .projekt-kep,
+    .projekt-szoveg {
+        width: 100%;
+    }
+
+
+    /* KAPCSOLAT */
+
+    .kapcsolat {
+        flex-direction: column;
+    }
+
+    .kapcsolat-szoveg,
+    .kapcsolat-kep {
+        width: 100%;
+    }
+
 }
