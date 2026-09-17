@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -19,6 +20,8 @@ body {
     color: #111111;
     line-height: 1.2;
 }
+
+
 
 
 /* =========================
@@ -234,6 +237,7 @@ section > h2 {
     border-radius: 10px;
     box-shadow: 0 2px 6px #aaaaaa;
     transition: 0.3s;
+    margin-bottom: 25px;
 }
 
 .projekt-kep {
@@ -296,6 +300,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 
 
 /* =================================================
