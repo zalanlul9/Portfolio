@@ -205,6 +205,14 @@ section > h2 {
     transform: translateY(-5px);
 }
 
+.projekt:hover {
+    border-color: #08b6d5;
+
+    box-shadow: 0 5px 15px #888888;
+
+    transform: translateY(-5px);
+}
+
 
 /* =========================
    PROJEKTEK
@@ -219,11 +227,13 @@ section > h2 {
 .projekt {
     display: flex;
     gap: 30px;
-    padding: 15px;
     background-color: #eeeeee;
     border: 1px solid #cccccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #999999;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #aaaaaa;
+    transition: 0.3s;
 }
 
 .projekt-kep {
@@ -250,14 +260,14 @@ section > h2 {
 
 .kapcsolat {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
     gap: 30px;
 }
 
 .kapcsolat-szoveg {
     flex: 1;
-    text-align: center;
+    text-align: right;
 }
 
 .kapcsolat-kep {
@@ -344,11 +354,17 @@ footer p {
 
     .kapcsolat {
         flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .kapcsolat-szoveg,
     .kapcsolat-kep {
         width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
 }
